@@ -18,3 +18,5 @@ var player = new Player(name); // adding the player to our game! Create an insta
 Console.WriteLine(Text.Language.Welcome, player.Name); // replacing name with player.Name (Name is the public property)
 
 var house = new House(player);
+
+Actions.Instance.Register(new Go(house));

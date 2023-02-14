@@ -12,7 +12,7 @@ namespace oop_adventure.Source.Map
     {
         public Player Player { get; }
         
-        private readonly Random _rnd = new(1234); // the seed (review)
+        private readonly Random _rnd = new(1234); // the seed (review) - can't be changed at runtime 
         public int Width { get; set; }
         public int Height { get; set; }
         public Room[] Rooms { get; private set; }

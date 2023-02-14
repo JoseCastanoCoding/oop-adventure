@@ -11,7 +11,7 @@ public partial class House
             CurrentRoom.Visited = true;
 
         CurrentRoom = Rooms[index];
-
+    
     }
     public void GoToStartingRoom() 
     {
