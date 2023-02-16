@@ -1,6 +1,6 @@
 ﻿using oop_adventure.Source.Text;
 
-namespace oop_adventure.Source.Map;
+namespace oop_adventure;
 
 public partial class House
 {

@@ -6,21 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop_adventure.Source.Map
+namespace oop_adventure;
+
+public partial class House
 {
-    public partial class House
+    public Player Player { get; }
+    
+    private readonly Random _rnd = new(1234); // the seed (review) - can't be changed at runtime 
+    public int Width { get; set; }
+    public int Height { get; set; }
+    public Room[] Rooms { get; private set; }
+
+    public House(Player player)
     {
-        public Player Player { get; }
-        
-        private readonly Random _rnd = new(1234); // the seed (review) - can't be changed at runtime 
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public Room[] Rooms { get; private set; }
-
-        public House(Player player)
-        {
-            Player = player;
-        }
-
+        Player = player;
     }
+
 }

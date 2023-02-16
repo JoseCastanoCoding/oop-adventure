@@ -1,7 +1,6 @@
 ﻿using oop_adventure;
 using oop_adventure.Source;
 using oop_adventure.Source.Characters;
-using oop_adventure.Source.Map;
 using oop_adventure.Source.Text;
 
 Text.loadLanguage(new English());
@@ -18,5 +17,31 @@ var player = new Player(name); // adding the player to our game! Create an insta
 Console.WriteLine(Text.Language.Welcome, player.Name); // replacing name with player.Name (Name is the public property)
 
 var house = new House(player);
+house.CreateRooms(3, 3);
+house.DecorateRooms();
 
 Actions.Instance.Register(new Go(house));
+
+house.GoToStartingRoom();
+
+var run = true;
+
+Room lastRoom = null;
+
+while(run)
+{
+    if(lastRoom != house.CurrentRoom)
+    {
+        Console.WriteLine(house.CurrentRoom.ToString());
+        lastRoom = house.CurrentRoom;
+    }
+
+    Console.WriteLine(Text.Language.WhatToDo);
+
+    var input = Console.ReadLine().ToLower();
+
+    if(input == Text.Language.Quit)
+        run = false;
+    else
+        Actions.Instance.Execute(input.Split(" "));
+}

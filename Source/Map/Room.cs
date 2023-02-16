@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using oop_adventure.Source.Map;
+
 
 namespace oop_adventure;
 
@@ -20,4 +20,25 @@ public class Room
         {DirectionsEnum.None, -1 },
     };
     public bool Visited { get; set; }
+
+    public override string ToString()
+    {
+        var sb = new StringBuilder();
+
+        if(Visited)
+            sb.Append(string.Format(Text.Language.RoomOld, Name));
+        else
+            sb.Append(string.Format(Text.Language.RoomNew, Name));
+
+        var names = Enum.GetNames(typeof(DirectionsEnum));
+
+        var directions = (from p in names where Neighbors[(DirectionsEnum)Enum.Parse(typeof(DirectionsEnum), p)] > -1 select p.ToLower()).ToArray();
+
+        var description = string.Format(Description, Text.Language.JoinedWordList(directions, Text.Language.And));
+
+        sb.Append(description);
+
+        return sb.ToString();
+    }
+
 }

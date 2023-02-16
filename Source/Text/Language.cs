@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace oop_adventure;
-public abstract class Language // Base class to store all the text in our game
+public abstract partial class Language // Base class to store all the text in our game
 {
 // protected set = no other classes will be able to access that property
     public string Welcome { get; protected set; } = ""; 
@@ -16,4 +16,13 @@ public abstract class Language // Base class to store all the text in our game
     public string ActionError { get; protected set; } = "";
     public string Go { get; protected set; } = "";
     public string GoError { get; protected set; } = "";
+    public string WhatToDo { get; protected set; } = "";
+    public string Quit { get; protected set; } = "";
+    public string RoomNew { get; protected set; } = "";
+    public string RoomOld { get; protected set; } = "";
+    public string And { get; protected set; } = "";
+    public string Comma { get; protected set; } = "";
+    public string Space { get; protected set; } = "";
+    public List<string> RoomDescriptions { get; protected set; }
+
 }

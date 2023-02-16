@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop_adventure.Source.Map
+namespace oop_adventure;
+
+public enum DirectionsEnum
 {
-    public enum DirectionsEnum
-    {
-        None,
-        North,
-        East,
-        South,
-        West
-    }
+    None,
+    North,
+    East,
+    South,
+    West
 }
