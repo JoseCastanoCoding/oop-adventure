@@ -1,10 +1,4 @@
 ﻿using oop_adventure.Source.Characters;
-using oop_adventure.Source.Text;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace oop_adventure;
 

@@ -1,7 +1,5 @@
 ﻿using oop_adventure;
-using oop_adventure.Source;
 using oop_adventure.Source.Characters;
-using oop_adventure.Source.Text;
 
 Text.loadLanguage(new English());
 
@@ -21,6 +19,7 @@ house.CreateRooms(3, 3);
 house.DecorateRooms();
 
 Actions.Instance.Register(new Go(house));
+Actions.Instance.Register(new Backpack(player));
 
 house.GoToStartingRoom();
 

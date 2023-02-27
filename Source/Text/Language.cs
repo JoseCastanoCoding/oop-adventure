@@ -24,5 +24,15 @@ public abstract partial class Language // Base class to store all the text in ou
     public string Comma { get; protected set; } = "";
     public string Space { get; protected set; } = "";
     public List<string> RoomDescriptions { get; protected set; }
+    public string NoItem { get; protected set; } = "";
+    public string Backpack { get; protected set; } = "";
+    public string BackpackError { get; protected set; } = "";
+    public string BackpackDescription { get; protected set; } = "";
+    public string Chest { get; protected set; } = "";
+    public string UnlockChest { get; protected set; } = "";
+    public string Key { get; protected set; } = "";
+    public string ChestEmpty { get; protected set; } = "";
+    public string ChestFound { get; protected set; } = "";
+
 
 }

@@ -1,6 +1,4 @@
-﻿using oop_adventure.Source.Text;
-
-namespace oop_adventure;
+﻿namespace oop_adventure;
 
 public partial class House
 {

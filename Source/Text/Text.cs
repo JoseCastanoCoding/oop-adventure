@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace oop_adventure;
 
 public static class Text // static keyword means I can access the class without creating an instance of it. There should only be one reference to this throughout the entire system
