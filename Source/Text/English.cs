@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace oop_adventure;
 
@@ -44,6 +45,14 @@ public class English : Language
         Key = "key";
         ChestEmpty = "The chest is empty";
         ChestFound = "You found: {0}";
+        Gold = "{0} gold {1}";
+        Coin = "coin";
+        Coins = Coin + "s";
+        Plural = "s";
+        Is = "is";
+        Are = "are";
+        TotalItems = " There {0} {1} item{2} in the room: ";
+        Period = ".";
     }
 
 }
